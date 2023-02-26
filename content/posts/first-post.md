@@ -10,3 +10,5 @@ tags: ["blog"]
 # Hello World!
 
 This is my blog.
+
+[Visit my first page (no blog)](../first-site/)
