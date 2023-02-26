@@ -9,4 +9,4 @@ tags: ["blog"]
 
 This is my blog.
 
-[Visit my first page (no blog)](../../first-page/)
+[Visit my first page (no blog)](../../first-site/)
