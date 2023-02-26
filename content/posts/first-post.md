@@ -7,8 +7,6 @@ type: "post"
 tags: ["blog"]
 ---
 
-# Hello World!
-
 This is my blog.
 
-[Visit my first page (no blog)](../first-site/)
+[Visit my first page (no blog)](../first-page/)
