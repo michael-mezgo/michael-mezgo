@@ -1,0 +1,67 @@
+---
+import { getCollection } from 'astro:content';
+
+const projects = (await getCollection('projects')).sort((a, b) => b.data.year - a.data.year);
+---
+
+<section class="section" id="projects">
+  <div class="wrap">
+    <h2 class="section-title">Projects</h2>
+    <ul class="grid">
+      {projects.map((p) => (
+        <li class="card">
+          <p class="year">{p.data.year}</p>
+          <h3>
+            {p.data.link ? (
+              <a href={p.data.link} rel="noreferrer">
+                {p.data.title}
+              </a>
+            ) : (
+              p.data.title
+            )}
+          </h3>
+          <p class="desc">{p.data.description}</p>
+          <p class="stack">{p.data.stack.join(' · ')}</p>
+        </li>
+      ))}
+    </ul>
+  </div>
+</section>
+
+<style>
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 280px), 1fr));
+    gap: 24px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  .card {
+    padding: 24px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+  }
+  .card p {
+    margin: 0;
+  }
+  .year {
+    font-family: var(--mono), monospace;
+    font-size: 14px;
+    color: var(--muted);
+  }
+  h3 {
+    margin: 8px 0;
+    font-size: 22px;
+  }
+  .desc {
+    color: var(--muted);
+  }
+  .card .stack {
+    margin-top: 16px;
+    font-family: var(--mono), monospace;
+    font-size: 14px;
+    color: var(--accent);
+  }
+</style>

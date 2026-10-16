@@ -1,0 +1,11 @@
+<a data-mail data-u="web" data-d="mezgolits.at" hidden></a>
+<noscript>web [at] mezgolits.at</noscript>
+
+<script>
+  document.querySelectorAll<HTMLAnchorElement>('a[data-mail]').forEach((el) => {
+    const addr = `${el.dataset.u}@${el.dataset.d}`;
+    el.href = `mailto:${addr}`;
+    el.textContent = addr;
+    el.hidden = false;
+  });
+</script>

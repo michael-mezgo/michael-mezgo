@@ -1,0 +1,48 @@
+<header class="nav">
+  <div class="wrap bar">
+    <a class="logo" href="/">
+      mezgolits<span>.at</span>
+    </a>
+    <nav aria-label="Main" lang="en">
+      <a href="/#projects">Projects</a>
+      <a href="/#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<style>
+  .nav {
+    border-bottom: 1px solid var(--divider);
+  }
+  .bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 64px;
+  }
+  .logo {
+    font-family: var(--mono), monospace;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    min-height: var(--tap);
+  }
+  .logo span {
+    color: var(--accent);
+  }
+  nav {
+    display: flex;
+    gap: 8px;
+  }
+  nav a {
+    display: inline-flex;
+    align-items: center;
+    min-height: var(--tap);
+    padding: 0 12px;
+    color: var(--muted);
+    text-decoration: none;
+  }
+  nav a:hover {
+    color: var(--text);
+  }
+</style>

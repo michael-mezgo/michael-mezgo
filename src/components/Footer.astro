@@ -1,0 +1,27 @@
+---
+const year = new Date().getFullYear();
+---
+
+<footer>
+  <div class="wrap inner">
+    <span>© {year} Michael Mezgolits</span>
+    <a href="/datenschutz" lang="de">
+      Datenschutz
+    </a>
+  </div>
+</footer>
+
+<style>
+  footer {
+    padding: 32px 0;
+    border-top: 1px solid var(--divider);
+    color: var(--muted);
+    font-size: 15px;
+  }
+  .inner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 8px 24px;
+  }
+</style>
